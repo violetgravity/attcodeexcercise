@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Expendiary</title> 
+    <!-- CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/screen_expendiary.css" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link href="css/bootstrap-datepicker.css" rel="stylesheet">  
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+           <a href="index.html"><img src="images/expendiary-logo-white.png" title="Expendiary Logo" /></a>
+        </div>
+    </nav><br />
+    <div class="page-wrap">
+        <div class="container">  
+            <div class="content-panel expense-overview clearfix">  
+                <h3>Create a New Expense</h3> 
+                <form id="createExpense" action="#" method="post" class="form-vertical clearfix" >    
+                    <div class="form-group">
+                        <label class="control-label">Expense Title <span class="err sm">*</span></label>  
+                        <div>
+                            <input type="text" class="form-control-lg " name="expensetitle" id="expensetitle" value="" placeholder="Enter expense title">  
+                        </div>
+                    </div>
+                    <div class="form-group" id="datepicker">
+                        <label class="control-label">Date of Purchase <span class="err sm">*</span></label>   
+                        <div class="input-group">
+                            <input type="text" class="form-control-lg" name="dateofpurchase" id="dateofpurchase" data-date-end-date="0d"  placeholder="Enter date of purchase">
+                            <span class="input-group-addon"><i class="fa fa-calendar"></i></span>  
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Expense Category <span class="err sm">*</span></label>  
+                        <select name="expensecategory"  id="expensecategory" class="form-control inlineitem selectable-select">
+                            <option value="0">Select a Category</option> 
+                            <option value="1">Bills & Payments</option>
+                            <option value="2">Groceries</option>  
+                            <option value="3">Maintenance &amp; Repairs</option>  
+                        </select> 
+                    </div>  
+                    <div class="form-group">  
+                        <input type="submit" id="save" class="btn btn-md btn-primary" value="Add Expense" >  
+                        <input type="button" id="create" class="btn btn-md btn-default" value="Clear" onclick="clearExpenses()">
+                    </div>  
+                </form>
+            </div><br />
+            <div class="content-panel expense-overview clearfix" id="tblDataGrid" style="display:none;"> 
+                <table class="table table-bordered" id="tblExpenses">  
+                    <tr>
+                        <td width="60%" class="bg-warning">Expense Title</td>
+                        <td width="20%" class="bg-warning">Date of Purchase</td>
+                        <td width="20%" class="bg-warning">Expense Category</td>
+                        <td width="20%" class="bg-warning">Actions</td>
+                    </tr>
+                </table> 
+            </div>
+        </div> 
+    </div> 
+    <script src="js/jquery.min.js"></script> 
+    <script src="js/bootstrap.js"></script> 
+    <script src="js/jquery.validate.min.js"></script> 
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/init.js"></script> 
+</body>
+</html>
+
